@@ -2352,14 +2352,6 @@ export const challengeCards: Card[] = [
 
 export const decks: Deck[] = [
   {
-    id: 'connection',
-    name: 'Connection',
-    description: 'Deep questions to strengthen your bond',
-    color: '#6200EE',
-    icon: 'favorite',
-    cards: connectionCards,
-  },
-  {
     id: 'sparkquestions',
     name: 'Spark Questions',
     description: 'Fun and lighthearted questions to spark conversation',
@@ -2422,22 +2414,6 @@ export const decks: Deck[] = [
     color: '#3F51B5',
     icon: 'group',
     cards: bondQuestsCards,
-  },
-  {
-    id: 'datenight',
-    name: 'Date Night',
-    description: 'Fun missions for your next date',
-    color: '#03DAC5',
-    icon: 'restaurant',
-    cards: dateNightCards,
-  },
-  {
-    id: 'challenge',
-    name: 'Challenge',
-    description: 'Bold adventures to try together',
-    color: '#FF4081',
-    icon: 'local-fire-department',
-    cards: challengeCards,
   },
 ];
 
