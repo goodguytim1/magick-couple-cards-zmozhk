@@ -8,6 +8,7 @@ import {
   ScrollView,
   ActivityIndicator,
   Alert,
+  Image,
 } from 'react-native';
 import { colors } from '@/styles/commonStyles';
 import { decks } from '@/data/content';
@@ -98,7 +99,14 @@ export default function HomeScreen() {
   const renderHome = () => (
     <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
       <View style={styles.header}>
-        <Text style={[styles.appTitle, { color: textColor }]}>✨ Magick</Text>
+        <View style={styles.titleContainer}>
+          <Image 
+            source={require('@/assets/images/2f32a6ce-d9ea-44d4-a489-d710fb0b74aa.png')}
+            style={styles.crystalBall}
+            resizeMode="contain"
+          />
+          <Text style={[styles.appTitle, { color: textColor }]}>Magick</Text>
+        </View>
         <Text style={[styles.subtitle, { color: secondaryTextColor }]}>
           Connect with your partner through cards
         </Text>
@@ -378,10 +386,19 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     marginBottom: 20,
   },
+  titleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 8,
+  },
+  crystalBall: {
+    width: 48,
+    height: 48,
+  },
   appTitle: {
     fontSize: 36,
     fontWeight: '800',
-    marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
