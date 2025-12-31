@@ -108,7 +108,7 @@ export default function HomeScreen() {
           <Text style={[styles.appTitle, { color: textColor }]}>Magick</Text>
         </View>
         <Text style={[styles.subtitle, { color: secondaryTextColor }]}>
-          Connect with your partner through cards
+          Where conversations become Magick
         </Text>
       </View>
 
@@ -140,6 +140,10 @@ export default function HomeScreen() {
       />
 
       <View style={styles.actionButtons}>
+        <Text style={[styles.actionSubtitle, { color: secondaryTextColor }]}>
+          Connect with people through cards
+        </Text>
+
         <TouchableOpacity
           style={[styles.primaryButton, { backgroundColor: colors.primary }]}
           onPress={handleDrawCard}
@@ -418,6 +422,12 @@ const styles = StyleSheet.create({
   actionButtons: {
     paddingHorizontal: 20,
     marginTop: 20,
+  },
+  actionSubtitle: {
+    fontSize: 16,
+    textAlign: 'center',
+    marginBottom: 12,
+    lineHeight: 22,
   },
   primaryButton: {
     flexDirection: 'row',
