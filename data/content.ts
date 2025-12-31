@@ -4,7 +4,7 @@ import { Card, Deck, Business } from '@/types';
 export const magickMixerCards: Card[] = [
   {
     id: 'mixer_1',
-    text: 'If you&apos;ve ever texted an ex after midnight → take 3 sips or do 3 squats.',
+    text: 'If you\'ve ever texted an ex after midnight → take 3 sips or do 3 squats.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -14,7 +14,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_2',
-    text: 'If you&apos;ve ever said "I&apos;m on the way" while still at home → hop on one leg 3 times.',
+    text: 'If you\'ve ever said "I\'m on the way" while still at home → hop on one leg 3 times.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -24,7 +24,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_3',
-    text: 'If you&apos;ve ever caught feelings you didn&apos;t plan for → touch your chest and take a sip.',
+    text: 'If you\'ve ever caught feelings you didn\'t plan for → touch your chest and take a sip.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -34,7 +34,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_4',
-    text: 'If you&apos;ve ever gone back to someone you said you were done with → do 5 jumping jacks.',
+    text: 'If you\'ve ever gone back to someone you said you were done with → do 5 jumping jacks.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -44,7 +44,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_5',
-    text: 'If you&apos;ve ever stalked someone&apos;s social media and accidentally liked an old post → take 2 sips.',
+    text: 'If you\'ve ever stalked someone\'s social media and accidentally liked an old post → take 2 sips.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -54,7 +54,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_6',
-    text: 'If you&apos;ve ever lied about why you were late → spin in a circle once.',
+    text: 'If you\'ve ever lied about why you were late → spin in a circle once.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -64,7 +64,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_7',
-    text: 'If you&apos;ve ever had a crush on someone in this room → take a sip or smile quietly.',
+    text: 'If you\'ve ever had a crush on someone in this room → take a sip or smile quietly.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -74,7 +74,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_8',
-    text: 'If you&apos;ve ever ghosted someone → do 3 squats or take a sip.',
+    text: 'If you\'ve ever ghosted someone → do 3 squats or take a sip.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -84,7 +84,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_9',
-    text: 'If you&apos;ve ever been ghosted → point at the ceiling and take a sip.',
+    text: 'If you\'ve ever been ghosted → point at the ceiling and take a sip.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -94,7 +94,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_10',
-    text: 'If you&apos;ve ever stayed out way later than you planned → jump twice.',
+    text: 'If you\'ve ever stayed out way later than you planned → jump twice.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -104,7 +104,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_11',
-    text: 'If you&apos;ve ever deleted a text and rewrote it three times → take 2 sips.',
+    text: 'If you\'ve ever deleted a text and rewrote it three times → take 2 sips.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -114,7 +114,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_12',
-    text: 'If you&apos;ve ever caught yourself catching feelings way too fast → do 3 squats.',
+    text: 'If you\'ve ever caught yourself catching feelings way too fast → do 3 squats.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -124,7 +124,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_13',
-    text: 'If you&apos;ve ever said "it&apos;s nothing" when it was definitely something → take a sip.',
+    text: 'If you\'ve ever said "it\'s nothing" when it was definitely something → take a sip.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -134,7 +134,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_14',
-    text: 'If you&apos;ve ever flirted just for fun → clap 3 times.',
+    text: 'If you\'ve ever flirted just for fun → clap 3 times.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -144,7 +144,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_15',
-    text: 'If you&apos;ve ever went out with no plans and had a wild night → take 3 sips or do 5 jumping jacks.',
+    text: 'If you\'ve ever went out with no plans and had a wild night → take 3 sips or do 5 jumping jacks.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -154,7 +154,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_16',
-    text: 'If you&apos;ve ever overshared a little too much → do a shoulder shimmy.',
+    text: 'If you\'ve ever overshared a little too much → do a shoulder shimmy.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -164,7 +164,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_17',
-    text: 'If you&apos;ve ever pretended you were unbothered when you were definitely bothered → take a sip.',
+    text: 'If you\'ve ever pretended you were unbothered when you were definitely bothered → take a sip.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -174,7 +174,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_18',
-    text: 'If you&apos;ve ever sent a risky text and immediately put your phone face down → do 3 squats.',
+    text: 'If you\'ve ever sent a risky text and immediately put your phone face down → do 3 squats.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -184,7 +184,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_19',
-    text: 'If you&apos;ve ever stayed in something longer than you should have → take 2 sips.',
+    text: 'If you\'ve ever stayed in something longer than you should have → take 2 sips.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -194,7 +194,7 @@ export const magickMixerCards: Card[] = [
   },
   {
     id: 'mixer_20',
-    text: 'If you&apos;ve ever had a "we shouldn&apos;t but we did" moment → jump once.',
+    text: 'If you\'ve ever had a "we shouldn\'t but we did" moment → jump once.',
     type: 'question',
     deck: 'magickmixer',
     tags: ['social', 'fun', 'icebreaker', '21+'],
@@ -237,7 +237,7 @@ export const connectionCards: Card[] = [
   },
   {
     id: 'conn_4',
-    text: 'What is something new you&apos;d like to try together?',
+    text: 'What is something new you\'d like to try together?',
     type: 'question',
     deck: 'connection',
     tags: ['adventure', 'growth', 'future'],
@@ -260,7 +260,7 @@ export const connectionCards: Card[] = [
 export const sparkQuestionsCards: Card[] = [
   {
     id: 'spark_1',
-    text: 'What&apos;s the most unusual food you&apos;ve ever tried?',
+    text: 'What\'s the most unusual food you\'ve ever tried?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['food', 'fun', 'conversation'],
@@ -280,7 +280,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_3',
-    text: 'What&apos;s your guilty pleasure TV show or movie?',
+    text: 'What\'s your guilty pleasure TV show or movie?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['entertainment', 'fun', 'personal'],
@@ -290,7 +290,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_4',
-    text: 'What&apos;s the funniest thing you believed as a kid?',
+    text: 'What\'s the funniest thing you believed as a kid?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['childhood', 'humor', 'memory'],
@@ -310,7 +310,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_6',
-    text: 'What&apos;s the weirdest talent you have?',
+    text: 'What\'s the weirdest talent you have?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['talent', 'fun', 'unique'],
@@ -330,7 +330,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_8',
-    text: 'What&apos;s the most spontaneous thing you&apos;ve ever done?',
+    text: 'What\'s the most spontaneous thing you\'ve ever done?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['adventure', 'memory', 'spontaneity'],
@@ -350,7 +350,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_10',
-    text: 'What&apos;s your go-to karaoke song?',
+    text: 'What\'s your go-to karaoke song?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['music', 'fun', 'entertainment'],
@@ -360,7 +360,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_11',
-    text: 'What&apos;s the worst haircut you&apos;ve ever had?',
+    text: 'What\'s the worst haircut you\'ve ever had?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['humor', 'memory', 'personal'],
@@ -380,7 +380,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_13',
-    text: 'What&apos;s the strangest thing you&apos;ve ever collected?',
+    text: 'What\'s the strangest thing you\'ve ever collected?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['hobby', 'unique', 'personal'],
@@ -390,7 +390,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_14',
-    text: 'What&apos;s your "happy" food?',
+    text: 'What is your "happy" food?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['food', 'comfort', 'personal'],
@@ -400,7 +400,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_15',
-    text: 'If you had a time machine, what&apos;s the first year you&apos;d visit?',
+    text: 'If you had a time machine, what\'s the first year you\'d visit?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['history', 'imagination', 'adventure'],
@@ -410,7 +410,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_16',
-    text: 'What&apos;s your dream vacation spot?',
+    text: 'What\'s your dream vacation spot?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['travel', 'dreams', 'adventure'],
@@ -420,7 +420,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_17',
-    text: 'What&apos;s your most used emoji?',
+    text: 'What\'s your most used emoji?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['fun', 'communication', 'personal'],
@@ -440,7 +440,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_19',
-    text: 'What&apos;s your "comfort" movie?',
+    text: 'What\'s your "comfort" movie?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['entertainment', 'comfort', 'personal'],
@@ -460,7 +460,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_21',
-    text: 'What&apos;s the funniest prank you&apos;ve ever pulled or had pulled on you?',
+    text: 'What\'s the funniest prank you\'ve ever pulled or had pulled on you?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['humor', 'memory', 'fun'],
@@ -470,7 +470,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_22',
-    text: 'What&apos;s your biggest pet peeve?',
+    text: 'What\'s your biggest pet peeve?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['personal', 'preferences', 'quirks'],
@@ -500,7 +500,7 @@ export const sparkQuestionsCards: Card[] = [
   },
   {
     id: 'spark_25',
-    text: 'What&apos;s the strangest dream you&apos;ve had?',
+    text: 'What\'s the strangest dream you\'ve had?',
     type: 'question',
     deck: 'sparkquestions',
     tags: ['dreams', 'imagination', 'personal'],
@@ -513,7 +513,7 @@ export const sparkQuestionsCards: Card[] = [
 export const mirrorMomentsCards: Card[] = [
   {
     id: 'mirror_1',
-    text: 'What&apos;s the best advice you&apos;ve ever received?',
+    text: 'What\'s the best advice you\'ve ever received?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['wisdom', 'reflection', 'growth'],
@@ -533,7 +533,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_3',
-    text: 'Who&apos;s been the biggest influence in your life?',
+    text: 'Who\'s been the biggest influence in your life?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['relationships', 'reflection', 'gratitude'],
@@ -543,7 +543,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_4',
-    text: 'What&apos;s your proudest accomplishment?',
+    text: 'What\'s your proudest accomplishment?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['achievement', 'pride', 'reflection'],
@@ -563,7 +563,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_6',
-    text: 'What&apos;s something you&apos;re still learning about yourself?',
+    text: 'What\'s something you\'re still learning about yourself?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['self-discovery', 'growth', 'reflection'],
@@ -573,7 +573,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_7',
-    text: 'What&apos;s the hardest decision you&apos;ve had to make?',
+    text: 'What\'s the hardest decision you\'ve had to make?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['challenges', 'reflection', 'deep'],
@@ -583,7 +583,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_8',
-    text: 'What&apos;s a belief you had 5 years ago that&apos;s changed?',
+    text: 'What\'s a belief you had 5 years ago that\'s changed?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['growth', 'reflection', 'evolution'],
@@ -613,7 +613,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_11',
-    text: 'What&apos;s the scariest thing you&apos;ve overcome?',
+    text: 'What\'s the scariest thing you\'ve overcome?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['courage', 'growth', 'challenges'],
@@ -623,7 +623,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_12',
-    text: 'What&apos;s your definition of love?',
+    text: 'What\'s your definition of love?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['love', 'philosophy', 'deep'],
@@ -633,7 +633,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_13',
-    text: 'What&apos;s one fear you&apos;d like to conquer?',
+    text: 'What\'s one fear you\'d like to conquer?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['fear', 'growth', 'goals'],
@@ -643,7 +643,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_14',
-    text: 'What&apos;s your most sentimental possession?',
+    text: 'What\'s your most sentimental possession?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['memory', 'sentiment', 'personal'],
@@ -693,7 +693,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_19',
-    text: 'What&apos;s a lesson you learned the hard way?',
+    text: 'What\'s a lesson you learned the hard way?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['wisdom', 'growth', 'challenges'],
@@ -713,7 +713,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_21',
-    text: 'What&apos;s a dream you&apos;ve given up on (or still holding onto)?',
+    text: 'What\'s a dream you\'ve given up on (or still holding onto)?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['dreams', 'reflection', 'deep'],
@@ -723,7 +723,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_22',
-    text: 'If money wasn&apos;t an issue, what would you be doing right now?',
+    text: 'If money wasn\'t an issue, what would you be doing right now?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['dreams', 'passion', 'reflection'],
@@ -753,7 +753,7 @@ export const mirrorMomentsCards: Card[] = [
   },
   {
     id: 'mirror_25',
-    text: 'What&apos;s the most important value you live by?',
+    text: 'What\'s the most important value you live by?',
     type: 'question',
     deck: 'mirrormoments',
     tags: ['values', 'philosophy', 'reflection'],
@@ -766,7 +766,7 @@ export const mirrorMomentsCards: Card[] = [
 export const playfulSparksCards: Card[] = [
   {
     id: 'playful_1',
-    text: 'Aliens land tomorrow — what&apos;s the first thing you ask them?',
+    text: 'Aliens land tomorrow — what\'s the first thing you ask them?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['imagination', 'fun', 'aliens'],
@@ -776,7 +776,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_2',
-    text: 'What&apos;s the most ridiculous fashion trend you&apos;ve followed?',
+    text: 'What\'s the most ridiculous fashion trend you\'ve followed?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['fashion', 'humor', 'memory'],
@@ -796,7 +796,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_4',
-    text: 'What&apos;s your spirit animal?',
+    text: 'What\'s your spirit animal?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['personality', 'fun', 'animals'],
@@ -806,7 +806,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_5',
-    text: 'What&apos;s your zombie apocalypse survival plan?',
+    text: 'What\'s your zombie apocalypse survival plan?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['survival', 'imagination', 'fun'],
@@ -826,7 +826,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_7',
-    text: 'Which superhero/villain do you think you&apos;re most like?',
+    text: 'Which superhero/villain do you think you\'re most like?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['personality', 'superheroes', 'fun'],
@@ -836,7 +836,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_8',
-    text: 'What&apos;s the weirdest food combo you secretly love?',
+    text: 'What\'s the weirdest food combo you secretly love?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['food', 'quirky', 'fun'],
@@ -846,7 +846,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_9',
-    text: 'What&apos;s your karaoke strategy: serious or silly?',
+    text: 'What\'s your karaoke strategy: serious or silly?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['music', 'personality', 'fun'],
@@ -866,7 +866,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_11',
-    text: 'What&apos;s your guilty pleasure snack?',
+    text: 'What\'s your guilty pleasure snack?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['food', 'personal', 'fun'],
@@ -896,7 +896,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_14',
-    text: 'What&apos;s the weirdest nickname you&apos;ve had?',
+    text: 'What\'s the weirdest nickname you\'ve had?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['humor', 'memory', 'personal'],
@@ -916,7 +916,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_16',
-    text: 'What&apos;s the strangest superstition you&apos;ve heard of?',
+    text: 'What\'s the strangest superstition you\'ve heard of?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['culture', 'fun', 'curiosity'],
@@ -936,7 +936,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_18',
-    text: 'What&apos;s the most embarrassing thing you&apos;ve done in public?',
+    text: 'What\'s the most embarrassing thing you\'ve done in public?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['humor', 'memory', 'embarrassment'],
@@ -956,7 +956,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_20',
-    text: 'What&apos;s the last thing that made you laugh until you cried?',
+    text: 'What\'s the last thing that made you laugh until you cried?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['humor', 'memory', 'joy'],
@@ -986,7 +986,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_23',
-    text: 'What&apos;s your guilty pleasure music artist?',
+    text: 'What\'s your guilty pleasure music artist?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['music', 'personal', 'fun'],
@@ -996,7 +996,7 @@ export const playfulSparksCards: Card[] = [
   },
   {
     id: 'playful_24',
-    text: 'What&apos;s your weirdest "shower thought"?',
+    text: 'What\'s your weirdest "shower thought"?',
     type: 'question',
     deck: 'playfulsparks',
     tags: ['thoughts', 'quirky', 'fun'],
@@ -1019,7 +1019,7 @@ export const playfulSparksCards: Card[] = [
 export const bondBuildersCards: Card[] = [
   {
     id: 'bond_1',
-    text: 'What&apos;s your love language?',
+    text: 'What\'s your love language?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['love-language', 'relationships', 'connection'],
@@ -1029,7 +1029,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_2',
-    text: 'What&apos;s your favorite memory with friends?',
+    text: 'What\'s your favorite memory with friends?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['friendship', 'memory', 'connection'],
@@ -1049,7 +1049,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_4',
-    text: 'What&apos;s the most romantic thing you&apos;ve ever done (or had done for you)?',
+    text: 'What\'s the most romantic thing you\'ve ever done (or had done for you)?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['romance', 'memory', 'love'],
@@ -1059,7 +1059,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_5',
-    text: 'What&apos;s your favorite "bonding" activity?',
+    text: 'What\'s your favorite "bonding" activity?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['activities', 'connection', 'fun'],
@@ -1069,7 +1069,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_6',
-    text: 'What&apos;s the best compliment you&apos;ve ever gotten?',
+    text: 'What\'s the best compliment you\'ve ever gotten?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['compliments', 'appreciation', 'memory'],
@@ -1079,7 +1079,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_7',
-    text: 'What&apos;s your biggest relationship lesson so far?',
+    text: 'What\'s your biggest relationship lesson so far?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['wisdom', 'relationships', 'growth'],
@@ -1099,7 +1099,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_9',
-    text: 'What&apos;s your friendship "green flag"?',
+    text: 'What\'s your friendship "green flag"?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['friendship', 'values', 'relationships'],
@@ -1119,7 +1119,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_11',
-    text: 'What&apos;s your favorite family tradition?',
+    text: 'What\'s your favorite family tradition?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['family', 'tradition', 'memory'],
@@ -1129,7 +1129,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_12',
-    text: 'What&apos;s your biggest "ick" in relationships?',
+    text: 'What\'s your biggest "ick" in relationships?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['relationships', 'boundaries', 'preferences'],
@@ -1139,7 +1139,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_13',
-    text: 'Who&apos;s your role model for love/friendship?',
+    text: 'Who\'s your role model for love/friendship?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['role-models', 'relationships', 'inspiration'],
@@ -1149,7 +1149,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_14',
-    text: 'What&apos;s your dream adventure with friends/partner?',
+    text: 'What\'s your dream adventure with friends/partner?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['adventure', 'dreams', 'connection'],
@@ -1169,7 +1169,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_16',
-    text: 'What&apos;s your go-to way to cheer someone up?',
+    text: 'What\'s your go-to way to cheer someone up?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['support', 'kindness', 'connection'],
@@ -1179,7 +1179,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_17',
-    text: 'What&apos;s your favorite bonding memory at work/school?',
+    text: 'What\'s your favorite bonding memory at work/school?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['memory', 'connection', 'friendship'],
@@ -1189,7 +1189,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_18',
-    text: 'What&apos;s your perfect first date idea?',
+    text: 'What\'s your perfect first date idea?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['dating', 'romance', 'preferences'],
@@ -1209,7 +1209,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_20',
-    text: 'What&apos;s a "dealbreaker" for you in relationships/friendships?',
+    text: 'What\'s a "dealbreaker" for you in relationships/friendships?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['boundaries', 'values', 'relationships'],
@@ -1219,7 +1219,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_21',
-    text: 'What&apos;s your favorite kind of surprise?',
+    text: 'What\'s your favorite kind of surprise?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['surprises', 'preferences', 'joy'],
@@ -1259,7 +1259,7 @@ export const bondBuildersCards: Card[] = [
   },
   {
     id: 'bond_25',
-    text: 'What&apos;s your idea of the perfect day with someone?',
+    text: 'What\'s your idea of the perfect day with someone?',
     type: 'question',
     deck: 'bondbuilders',
     tags: ['quality-time', 'dreams', 'connection'],
@@ -1332,7 +1332,7 @@ export const adventureSparksCards: Card[] = [
   },
   {
     id: 'adv_6',
-    text: 'Visit a new neighborhood you&apos;ve never walked through.',
+    text: 'Visit a new neighborhood you\'ve never walked through.',
     type: 'mission',
     deck: 'adventuresparks',
     tags: ['exploration', 'walking', 'discovery'],
@@ -1428,7 +1428,7 @@ export const adventureSparksCards: Card[] = [
   },
   {
     id: 'adv_14',
-    text: 'Go to a farmer&apos;s market and pick one food neither of you has tried.',
+    text: 'Go to a farmer\'s market and pick one food neither of you has tried.',
     type: 'mission',
     deck: 'adventuresparks',
     tags: ['food', 'discovery', 'local'],
@@ -1524,7 +1524,7 @@ export const adventureSparksCards: Card[] = [
   },
   {
     id: 'adv_22',
-    text: 'Try a food truck you&apos;ve never eaten from before.',
+    text: 'Try a food truck you\'ve never eaten from before.',
     type: 'mission',
     deck: 'adventuresparks',
     tags: ['food', 'adventure', 'local'],
@@ -2080,7 +2080,7 @@ export const mirrorQuestsCards: Card[] = [
   },
   {
     id: 'mirrorquest_21',
-    text: 'Each share something you&apos;ve never told anyone before.',
+    text: 'Each share something you\'ve never told anyone before.',
     type: 'mission',
     deck: 'mirrorquests',
     tags: ['vulnerability', 'trust', 'deep'],
@@ -2090,7 +2090,7 @@ export const mirrorQuestsCards: Card[] = [
   },
   {
     id: 'mirrorquest_22',
-    text: 'Go through each other&apos;s "top 3" life lessons.',
+    text: 'Go through each other\'s "top 3" life lessons.',
     type: 'mission',
     deck: 'mirrorquests',
     tags: ['wisdom', 'sharing', 'growth'],
@@ -2149,7 +2149,7 @@ export const bondQuestsCards: Card[] = [
   },
   {
     id: 'bondquest_2',
-    text: 'Sing loudly in a public space (bonus if it&apos;s a duet).',
+    text: 'Sing loudly in a public space (bonus if it\'s a duet).',
     type: 'mission',
     deck: 'bondquests',
     tags: ['performance', 'bold', 'fun'],
@@ -2185,7 +2185,7 @@ export const bondQuestsCards: Card[] = [
   },
   {
     id: 'bondquest_5',
-    text: 'Eat at a restaurant where you don&apos;t recognize anything on the menu.',
+    text: 'Eat at a restaurant where you don\'t recognize anything on the menu.',
     type: 'mission',
     deck: 'bondquests',
     tags: ['food', 'adventure', 'bold'],
@@ -2335,7 +2335,7 @@ export const bondQuestsCards: Card[] = [
   },
   {
     id: 'bondquest_18',
-    text: 'Pretend you&apos;re tourists in your own city.',
+    text: 'Pretend you\'re tourists in your own city.',
     type: 'mission',
     deck: 'bondquests',
     tags: ['exploration', 'fun', 'perspective'],
@@ -2347,7 +2347,7 @@ export const bondQuestsCards: Card[] = [
   },
   {
     id: 'bondquest_19',
-    text: 'Go to a fancy store and try on clothes you&apos;d never buy.',
+    text: 'Go to a fancy store and try on clothes you\'d never buy.',
     type: 'mission',
     deck: 'bondquests',
     tags: ['shopping', 'fun', 'playful'],
@@ -2395,7 +2395,7 @@ export const bondQuestsCards: Card[] = [
   },
   {
     id: 'bondquest_23',
-    text: 'Swap phones and take random (safe) pictures on each other&apos;s camera rolls.',
+    text: 'Swap phones and take random (safe) pictures on each other\'s camera rolls.',
     type: 'mission',
     deck: 'bondquests',
     tags: ['photography', 'trust', 'fun'],
@@ -2405,7 +2405,7 @@ export const bondQuestsCards: Card[] = [
   },
   {
     id: 'bondquest_24',
-    text: 'Go to your ex&apos;s house (if safe) and write them a gratitude letter.',
+    text: 'Go to your ex\'s house (if safe) and write them a gratitude letter.',
     type: 'mission',
     deck: 'bondquests',
     tags: ['healing', 'gratitude', 'closure'],
@@ -2533,7 +2533,7 @@ export const midnightMagickCards: Card[] = [
   // Direct Sexual Preferences
   {
     id: 'midnight_11',
-    text: 'What&apos;s your favorite position?',
+    text: 'What\'s your favorite position?',
     type: 'question',
     deck: 'midnightmagick',
     tags: ['sex', 'position', 'preferences', 'direct'],
@@ -2644,7 +2644,7 @@ export const midnightMagickCards: Card[] = [
   },
   {
     id: 'midnight_22',
-    text: 'What&apos;s your favorite way to give up control?',
+    text: 'What\'s your favorite way to give up control?',
     type: 'question',
     deck: 'midnightmagick',
     tags: ['power', 'submission', 'trust', 'dynamics'],
@@ -2654,7 +2654,7 @@ export const midnightMagickCards: Card[] = [
   },
   {
     id: 'midnight_23',
-    text: 'What&apos;s your favorite way to take control?',
+    text: 'What\'s your favorite way to take control?',
     type: 'question',
     deck: 'midnightmagick',
     tags: ['power', 'dominance', 'confidence', 'dynamics'],
@@ -2665,7 +2665,7 @@ export const midnightMagickCards: Card[] = [
   // Sexual Curiosity & Exploration
   {
     id: 'midnight_24',
-    text: 'Is there something sexual you&apos;ve always wanted to try but haven&apos;t yet?',
+    text: 'Is there something sexual you\'ve always wanted to try but haven\'t yet?',
     type: 'question',
     deck: 'midnightmagick',
     tags: ['curiosity', 'exploration', 'fantasy', 'desires'],
@@ -2726,7 +2726,7 @@ export const midnightMagickCards: Card[] = [
   },
   {
     id: 'midnight_30',
-    text: 'What&apos;s the easiest way for a partner to check in with you during sex?',
+    text: 'What\'s the easiest way for a partner to check in with you during sex?',
     type: 'question',
     deck: 'midnightmagick',
     tags: ['communication', 'consent', 'check-in', 'care'],
@@ -2787,7 +2787,7 @@ export const midnightMagickCards: Card[] = [
   },
   {
     id: 'midnight_36',
-    text: 'What do you need now that you didn&apos;t before?',
+    text: 'What do you need now that you didn\'t before?',
     type: 'question',
     deck: 'midnightmagick',
     tags: ['growth', 'needs', 'evolution', 'self-awareness'],
@@ -2832,7 +2832,7 @@ export const dateNightCards: Card[] = [
   },
   {
     id: 'date_2',
-    text: 'Find a restaurant you&apos;ve never been to and try something new on the menu',
+    text: 'Find a restaurant you\'ve never been to and try something new on the menu',
     type: 'mission',
     deck: 'datenight',
     tags: ['food', 'adventure', 'dining'],
@@ -2856,7 +2856,7 @@ export const dateNightCards: Card[] = [
   },
   {
     id: 'date_4',
-    text: 'Take a sunset walk in a park and share three things you&apos;re grateful for',
+    text: 'Take a sunset walk in a park and share three things you\'re grateful for',
     type: 'mission',
     deck: 'datenight',
     tags: ['outdoor', 'nature', 'gratitude'],
