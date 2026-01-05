@@ -1,116 +1,99 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { UserSettings, Business } from '@/types';
+import { FavoriteCard, UserSettings } from '@/types';
 
-const KEYS = {
-  SETTINGS: '@magick_settings',
-  FAVORITES: '@magick_favorites',
-  BUSINESSES: '@magick_businesses',
-};
-
-const DEFAULT_SETTINGS: UserSettings = {
-  darkMode: false,
-  monetizationMode: 'affiliate',
-  location: null,
-};
+const FAVORITES_KEY = '@magick_favorites';
+const SETTINGS_KEY = '@magick_settings';
+const DAILY_CARD_KEY = '@magick_daily_card';
 
 export const StorageService = {
+  // Favorites
+  async getFavorites(): Promise<FavoriteCard[]> {
+    try {
+      const data = await AsyncStorage.getItem(FAVORITES_KEY);
+      return data ? JSON.parse(data) : [];
+    } catch (error) {
+      console.log('Error getting favorites:', error);
+      return [];
+    }
+  },
+
+  async addFavorite(cardId: string): Promise<void> {
+    try {
+      const favorites = await this.getFavorites();
+      const newFavorite: FavoriteCard = {
+        cardId,
+        timestamp: Date.now(),
+      };
+      favorites.push(newFavorite);
+      await AsyncStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+    } catch (error) {
+      console.log('Error adding favorite:', error);
+    }
+  },
+
+  async removeFavorite(cardId: string): Promise<void> {
+    try {
+      const favorites = await this.getFavorites();
+      const filtered = favorites.filter(f => f.cardId !== cardId);
+      await AsyncStorage.setItem(FAVORITES_KEY, JSON.stringify(filtered));
+    } catch (error) {
+      console.log('Error removing favorite:', error);
+    }
+  },
+
+  async isFavorite(cardId: string): Promise<boolean> {
+    try {
+      const favorites = await this.getFavorites();
+      return favorites.some(f => f.cardId === cardId);
+    } catch (error) {
+      console.log('Error checking favorite:', error);
+      return false;
+    }
+  },
+
+  // Settings
   async getSettings(): Promise<UserSettings> {
     try {
-      console.log('[StorageService] Getting settings...');
-      const data = await AsyncStorage.getItem(KEYS.SETTINGS);
-      if (data) {
-        const parsed = JSON.parse(data);
-        console.log('[StorageService] Settings retrieved:', parsed);
-        return parsed;
-      }
-      console.log('[StorageService] No settings found, using defaults');
-      return DEFAULT_SETTINGS;
+      const data = await AsyncStorage.getItem(SETTINGS_KEY);
+      return data ? JSON.parse(data) : {
+        darkMode: false,
+        monetizationMode: 'affiliate',
+        location: null,
+      };
     } catch (error) {
-      console.error('[StorageService] Error getting settings:', error);
-      return DEFAULT_SETTINGS;
+      console.log('Error getting settings:', error);
+      return {
+        darkMode: false,
+        monetizationMode: 'affiliate',
+        location: null,
+      };
     }
   },
 
   async saveSettings(settings: UserSettings): Promise<void> {
     try {
-      console.log('[StorageService] Saving settings:', settings);
-      await AsyncStorage.setItem(KEYS.SETTINGS, JSON.stringify(settings));
-      console.log('[StorageService] Settings saved successfully');
+      await AsyncStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
     } catch (error) {
-      console.error('[StorageService] Error saving settings:', error);
-      throw error;
+      console.log('Error saving settings:', error);
     }
   },
 
-  async getFavorites(): Promise<string[]> {
+  // Daily Card
+  async getDailyCardDate(): Promise<string | null> {
     try {
-      console.log('[StorageService] Getting favorites...');
-      const data = await AsyncStorage.getItem(KEYS.FAVORITES);
-      if (data) {
-        const parsed = JSON.parse(data);
-        console.log('[StorageService] Favorites retrieved:', parsed.length, 'items');
-        return parsed;
-      }
-      console.log('[StorageService] No favorites found');
-      return [];
+      return await AsyncStorage.getItem(DAILY_CARD_KEY);
     } catch (error) {
-      console.error('[StorageService] Error getting favorites:', error);
-      return [];
+      console.log('Error getting daily card date:', error);
+      return null;
     }
   },
 
-  async saveFavorites(favorites: string[]): Promise<void> {
+  async setDailyCardDate(date: string): Promise<void> {
     try {
-      console.log('[StorageService] Saving favorites:', favorites.length, 'items');
-      await AsyncStorage.setItem(KEYS.FAVORITES, JSON.stringify(favorites));
-      console.log('[StorageService] Favorites saved successfully');
+      await AsyncStorage.setItem(DAILY_CARD_KEY, date);
     } catch (error) {
-      console.error('[StorageService] Error saving favorites:', error);
-      throw error;
-    }
-  },
-
-  async getBusinesses(): Promise<Business[]> {
-    try {
-      console.log('[StorageService] Getting businesses...');
-      const data = await AsyncStorage.getItem(KEYS.BUSINESSES);
-      if (data) {
-        const parsed = JSON.parse(data);
-        console.log('[StorageService] Businesses retrieved:', parsed.length, 'items');
-        return parsed;
-      }
-      console.log('[StorageService] No businesses found');
-      return [];
-    } catch (error) {
-      console.error('[StorageService] Error getting businesses:', error);
-      return [];
-    }
-  },
-
-  async saveBusinesses(businesses: Business[]): Promise<void> {
-    try {
-      console.log('[StorageService] Saving businesses:', businesses.length, 'items');
-      await AsyncStorage.setItem(KEYS.BUSINESSES, JSON.stringify(businesses));
-      console.log('[StorageService] Businesses saved successfully');
-    } catch (error) {
-      console.error('[StorageService] Error saving businesses:', error);
-      throw error;
-    }
-  },
-
-  async clearAll(): Promise<void> {
-    try {
-      console.log('[StorageService] Clearing all data...');
-      await AsyncStorage.multiRemove([
-        KEYS.SETTINGS,
-        KEYS.FAVORITES,
-        KEYS.BUSINESSES,
-      ]);
-      console.log('[StorageService] All data cleared successfully');
-    } catch (error) {
-      console.error('[StorageService] Error clearing data:', error);
-      throw error;
+      console.log('Error setting daily card date:', error);
     }
   },
 };

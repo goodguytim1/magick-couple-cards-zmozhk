@@ -1,12 +1,11 @@
-
 import "react-native-reanimated";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useFonts } from "expo-font";
 import { Stack, router } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { SystemBars } from "react-native-edge-to-edge";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { useColorScheme, Alert, View, Text, StyleSheet } from "react-native";
+import { useColorScheme, Alert } from "react-native";
 import { useNetworkState } from "expo-network";
 import {
   DarkTheme,
@@ -30,14 +29,10 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
-  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     if (loaded) {
-      console.log('[RootLayout] Fonts loaded, hiding splash screen');
-      SplashScreen.hideAsync().catch((err) => {
-        console.error('[RootLayout] Error hiding splash screen:', err);
-      });
+      SplashScreen.hideAsync();
     }
   }, [loaded]);
 
@@ -46,7 +41,6 @@ export default function RootLayout() {
       !networkState.isConnected &&
       networkState.isInternetReachable === false
     ) {
-      console.log('[RootLayout] Device is offline');
       Alert.alert(
         "🔌 You are offline",
         "You can keep using the app! Your changes will be saved locally and synced when you are back online."
@@ -54,35 +48,7 @@ export default function RootLayout() {
     }
   }, [networkState.isConnected, networkState.isInternetReachable]);
 
-  // Global error boundary
-  useEffect(() => {
-    const errorHandler = (error: Error) => {
-      console.error('[RootLayout] Uncaught error:', error);
-      setError(error);
-    };
-
-    // This won't catch all errors but helps with debugging
-    if (__DEV__) {
-      console.log('[RootLayout] Development mode - error logging enabled');
-    }
-
-    return () => {
-      console.log('[RootLayout] Cleanup');
-    };
-  }, []);
-
-  if (error) {
-    return (
-      <View style={styles.errorContainer}>
-        <Text style={styles.errorTitle}>Something went wrong</Text>
-        <Text style={styles.errorMessage}>{error.message}</Text>
-        <Text style={styles.errorStack}>{error.stack}</Text>
-      </View>
-    );
-  }
-
   if (!loaded) {
-    console.log('[RootLayout] Waiting for fonts to load...');
     return null;
   }
 
@@ -110,9 +76,6 @@ export default function RootLayout() {
       notification: "rgb(255, 69, 58)", // System Red (Dark Mode)
     },
   };
-
-  console.log('[RootLayout] Rendering app with color scheme:', colorScheme);
-
   return (
     <>
       <StatusBar style="auto" animated />
@@ -158,30 +121,3 @@ export default function RootLayout() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  errorContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-    backgroundColor: '#fff',
-  },
-  errorTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    color: '#ff0000',
-  },
-  errorMessage: {
-    fontSize: 16,
-    marginBottom: 10,
-    textAlign: 'center',
-    color: '#333',
-  },
-  errorStack: {
-    fontSize: 12,
-    color: '#666',
-    fontFamily: 'monospace',
-  },
-});

@@ -32,7 +32,7 @@ export default function HomeScreen() {
   const [loading, setLoading] = useState(false);
 
   const { favorites, toggleFavorite, isFavorite } = useFavorites();
-  const { settings, updateSettings } = useSettings();
+  const { settings, updateSettings, refreshLocation } = useSettings();
   const allCards = decks.flatMap(d => d.cards);
   const { dailyCard } = useDailyCard(allCards);
 
@@ -44,7 +44,7 @@ export default function HomeScreen() {
     if (currentCard && !currentCard.isAtHome) {
       loadRecommendations();
     }
-  }, [currentCard, settings.monetizationMode]);
+  }, [currentCard, settings.location, settings.monetizationMode]);
 
   const loadRecommendations = async () => {
     if (!currentCard) return;
@@ -53,7 +53,7 @@ export default function HomeScreen() {
     try {
       const recs = await RecommendationEngine.getRecommendations(
         currentCard,
-        null,
+        settings.location,
         settings.monetizationMode
       );
       setRecommendations(recs);
@@ -110,6 +110,26 @@ export default function HomeScreen() {
         <Text style={[styles.subtitle, { color: secondaryTextColor }]}>
           Where conversations become Magick
         </Text>
+      </View>
+
+      <View style={styles.locationContainer}>
+        <IconSymbol
+          ios_icon_name="location.fill"
+          android_material_icon_name="location-on"
+          size={16}
+          color={colors.secondary}
+        />
+        <Text style={[styles.locationText, { color: secondaryTextColor }]}>
+          {settings.location?.city || 'Loading location...'}
+        </Text>
+        <TouchableOpacity onPress={refreshLocation}>
+          <IconSymbol
+            ios_icon_name="arrow.clockwise"
+            android_material_icon_name="refresh"
+            size={16}
+            color={colors.secondary}
+          />
+        </TouchableOpacity>
       </View>
 
       <DeckSelector
@@ -368,7 +388,7 @@ const styles = StyleSheet.create({
   },
   header: {
     paddingHorizontal: 20,
-    marginBottom: 30,
+    marginBottom: 20,
   },
   titleContainer: {
     flexDirection: 'row',
@@ -387,6 +407,17 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     lineHeight: 22,
+  },
+  locationContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingHorizontal: 20,
+    marginBottom: 20,
+  },
+  locationText: {
+    fontSize: 14,
+    flex: 1,
   },
   actionButtons: {
     paddingHorizontal: 20,
