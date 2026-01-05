@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { RecommendedBusiness } from '@/utils/recommendations';
 import { colors } from '@/styles/commonStyles';
 import { IconSymbol } from './IconSymbol';
@@ -28,12 +28,12 @@ export const BusinessRecommendations: React.FC<BusinessRecommendationsProps> = (
     <View style={styles.container}>
       <View style={styles.header}>
         <IconSymbol
-          ios_icon_name="location.fill"
-          android_material_icon_name="location-on"
+          ios_icon_name="sparkles"
+          android_material_icon_name="auto-awesome"
           size={20}
           color={colors.secondary}
         />
-        <Text style={[styles.title, { color: textColor }]}>Recommended Nearby</Text>
+        <Text style={[styles.title, { color: textColor }]}>Recommended For You</Text>
       </View>
 
       <ScrollView
@@ -65,18 +65,6 @@ export const BusinessRecommendations: React.FC<BusinessRecommendationsProps> = (
             )}
 
             <View style={styles.footer}>
-              <View style={styles.distanceContainer}>
-                <IconSymbol
-                  ios_icon_name="location"
-                  android_material_icon_name="location-on"
-                  size={14}
-                  color={colors.secondary}
-                />
-                <Text style={[styles.distance, { color: colors.secondary }]}>
-                  {business.distance.toFixed(1)} mi
-                </Text>
-              </View>
-
               {business.rating && (
                 <View style={styles.ratingContainer}>
                   <IconSymbol
@@ -157,17 +145,8 @@ const styles = StyleSheet.create({
   },
   footer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-  },
-  distanceContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-  },
-  distance: {
-    fontSize: 13,
-    fontWeight: '600',
   },
   ratingContainer: {
     flexDirection: 'row',

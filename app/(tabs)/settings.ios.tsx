@@ -14,18 +14,12 @@ import { useSettings } from '@/hooks/useSettings';
 import { IconSymbol } from '@/components/IconSymbol';
 
 export default function SettingsScreen() {
-  const { settings, updateSettings, refreshLocation } = useSettings();
+  const { settings, updateSettings } = useSettings();
 
   const bgColor = settings.darkMode ? colors.darkBackground : colors.background;
   const textColor = settings.darkMode ? colors.darkText : colors.text;
   const secondaryTextColor = settings.darkMode ? colors.darkTextSecondary : colors.textSecondary;
   const cardColor = settings.darkMode ? colors.darkCard : colors.card;
-
-  const handleRefreshLocation = async () => {
-    Alert.alert('Refreshing Location', 'Getting your current location...');
-    await refreshLocation();
-    Alert.alert('Location Updated', 'Your location has been refreshed');
-  };
 
   return (
     <View style={[styles.container, { backgroundColor: bgColor }]}>
@@ -89,35 +83,6 @@ export default function SettingsScreen() {
               trackColor={{ false: colors.textSecondary, true: colors.secondary }}
               thumbColor="#FFFFFF"
             />
-          </View>
-        </View>
-
-        <View style={[styles.section, { backgroundColor: cardColor }]}>
-          <Text style={[styles.sectionTitle, { color: textColor }]}>Location</Text>
-          
-          <View style={styles.settingRow}>
-            <View style={styles.settingLeft}>
-              <IconSymbol
-                ios_icon_name="location.fill"
-                android_material_icon_name="location-on"
-                size={24}
-                color={textColor}
-              />
-              <View style={styles.settingText}>
-                <Text style={[styles.settingLabel, { color: textColor }]}>Current Location</Text>
-                <Text style={[styles.settingDescription, { color: secondaryTextColor }]}>
-                  {settings.location?.city || 'Not set'}
-                </Text>
-              </View>
-            </View>
-            <TouchableOpacity onPress={handleRefreshLocation} style={styles.refreshButton}>
-              <IconSymbol
-                ios_icon_name="arrow.clockwise"
-                android_material_icon_name="refresh"
-                size={24}
-                color={colors.primary}
-              />
-            </TouchableOpacity>
           </View>
         </View>
 
@@ -215,9 +180,6 @@ const styles = StyleSheet.create({
   settingDescription: {
     fontSize: 13,
     lineHeight: 18,
-  },
-  refreshButton: {
-    padding: 8,
   },
   infoRow: {
     flexDirection: 'row',

@@ -2,13 +2,11 @@
 import { useState, useEffect } from 'react';
 import { UserSettings } from '@/types';
 import { StorageService } from '@/utils/storage';
-import { LocationService } from '@/utils/location';
 
 export const useSettings = () => {
   const [settings, setSettings] = useState<UserSettings>({
     darkMode: false,
     monetizationMode: 'affiliate',
-    location: null,
   });
 
   useEffect(() => {
@@ -18,9 +16,6 @@ export const useSettings = () => {
   const loadSettings = async () => {
     const saved = await StorageService.getSettings();
     setSettings(saved);
-    
-    // Location is no longer loaded automatically on app start
-    // Users can manually refresh location using the refresh button
   };
 
   const updateSettings = async (updates: Partial<UserSettings>) => {
@@ -29,10 +24,5 @@ export const useSettings = () => {
     await StorageService.saveSettings(updated);
   };
 
-  const refreshLocation = async () => {
-    const location = await LocationService.getCurrentLocation();
-    await updateSettings({ location });
-  };
-
-  return { settings, updateSettings, refreshLocation };
+  return { settings, updateSettings };
 };

@@ -39,11 +39,6 @@ export interface Business {
 export interface UserSettings {
   darkMode: boolean;
   monetizationMode: 'affiliate' | 'sponsor';
-  location: {
-    latitude: number;
-    longitude: number;
-    city: string;
-  } | null;
 }
 
 export interface FavoriteCard {
