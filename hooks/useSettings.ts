@@ -19,13 +19,8 @@ export const useSettings = () => {
     const saved = await StorageService.getSettings();
     setSettings(saved);
     
-    // Load location if not set
-    if (!saved.location) {
-      const location = await LocationService.getCurrentLocation();
-      const updated = { ...saved, location };
-      setSettings(updated);
-      await StorageService.saveSettings(updated);
-    }
+    // Location is no longer loaded automatically on app start
+    // Users can manually refresh location using the refresh button
   };
 
   const updateSettings = async (updates: Partial<UserSettings>) => {

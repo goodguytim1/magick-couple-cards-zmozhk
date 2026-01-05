@@ -120,7 +120,7 @@ export default function HomeScreen() {
           color={colors.secondary}
         />
         <Text style={[styles.locationText, { color: secondaryTextColor }]}>
-          {settings.location?.city || 'Loading location...'}
+          {settings.location?.city || 'Tap refresh to set location'}
         </Text>
         <TouchableOpacity onPress={refreshLocation}>
           <IconSymbol
