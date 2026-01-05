@@ -1,4 +1,3 @@
-
 {
   "expo": {
     "name": "Magick",
@@ -15,11 +14,9 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.Magick",
+      "bundleIdentifier": "com.anonymous.Natively",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false,
-        "NSLocationWhenInUseUsageDescription": "Magick uses your location to recommend nearby venues for date night activities and missions.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "Magick uses your location to recommend nearby venues for date night activities and missions."
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -28,11 +25,7 @@
         "backgroundColor": "#000000"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.anonymous.Magick",
-      "permissions": [
-        "ACCESS_COARSE_LOCATION",
-        "ACCESS_FINE_LOCATION"
-      ]
+      "package": "com.anonymous.Natively"
     },
     "web": {
       "favicon": "./assets/images/final_quest_240x240.png",
@@ -41,20 +34,15 @@
     "plugins": [
       "expo-font",
       "expo-router",
-      "expo-web-browser",
-      [
-        "expo-location",
-        {
-          "locationAlwaysAndWhenInUsePermission": "Magick uses your location to recommend nearby venues for date night activities and missions."
-        }
-      ]
+      "expo-web-browser"
     ],
-    "scheme": "magick",
+    "scheme": "natively",
     "experiments": {
       "typedRoutes": true
     },
     "extra": {
       "router": {}
     }
-  }
+  },
+  "scheme": "Magick"
 }
