@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import { UserSettings } from '@/types';
 import { StorageService } from '@/utils/storage';
-import { LocationService } from '@/utils/location';
 
 export const useSettings = () => {
   const [settings, setSettings] = useState<UserSettings>({
@@ -25,25 +24,6 @@ export const useSettings = () => {
       console.log('[useSettings] Settings loaded:', saved);
       
       setSettings(saved);
-      
-      // Load location asynchronously without blocking
-      if (!saved.location) {
-        console.log('[useSettings] No location saved, fetching...');
-        // Don't await - let it load in background
-        LocationService.getCurrentLocation()
-          .then((location) => {
-            console.log('[useSettings] Location fetched:', location);
-            const updated = { ...saved, location };
-            setSettings(updated);
-            StorageService.saveSettings(updated).catch((err) => {
-              console.error('[useSettings] Failed to save location:', err);
-            });
-          })
-          .catch((error) => {
-            console.error('[useSettings] Failed to fetch location:', error);
-            // Continue without location - app should still work
-          });
-      }
     } catch (error) {
       console.error('[useSettings] Error loading settings:', error);
       // Set default settings if loading fails
@@ -69,16 +49,5 @@ export const useSettings = () => {
     }
   };
 
-  const refreshLocation = async () => {
-    try {
-      console.log('[useSettings] Refreshing location...');
-      const location = await LocationService.getCurrentLocation();
-      console.log('[useSettings] Location refreshed:', location);
-      await updateSettings({ location });
-    } catch (error) {
-      console.error('[useSettings] Error refreshing location:', error);
-    }
-  };
-
-  return { settings, updateSettings, refreshLocation, isLoading };
+  return { settings, updateSettings, isLoading };
 };
