@@ -10,34 +10,75 @@ export const useSettings = () => {
     monetizationMode: 'affiliate',
     location: null,
   });
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     loadSettings();
   }, []);
 
   const loadSettings = async () => {
-    const saved = await StorageService.getSettings();
-    setSettings(saved);
-    
-    // Load location if not set
-    if (!saved.location) {
-      const location = await LocationService.getCurrentLocation();
-      const updated = { ...saved, location };
-      setSettings(updated);
-      await StorageService.saveSettings(updated);
+    try {
+      console.log('[useSettings] Loading settings...');
+      setIsLoading(true);
+      
+      const saved = await StorageService.getSettings();
+      console.log('[useSettings] Settings loaded:', saved);
+      
+      setSettings(saved);
+      
+      // Load location asynchronously without blocking
+      if (!saved.location) {
+        console.log('[useSettings] No location saved, fetching...');
+        // Don't await - let it load in background
+        LocationService.getCurrentLocation()
+          .then((location) => {
+            console.log('[useSettings] Location fetched:', location);
+            const updated = { ...saved, location };
+            setSettings(updated);
+            StorageService.saveSettings(updated).catch((err) => {
+              console.error('[useSettings] Failed to save location:', err);
+            });
+          })
+          .catch((error) => {
+            console.error('[useSettings] Failed to fetch location:', error);
+            // Continue without location - app should still work
+          });
+      }
+    } catch (error) {
+      console.error('[useSettings] Error loading settings:', error);
+      // Set default settings if loading fails
+      setSettings({
+        darkMode: false,
+        monetizationMode: 'affiliate',
+        location: null,
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const updateSettings = async (updates: Partial<UserSettings>) => {
-    const updated = { ...settings, ...updates };
-    setSettings(updated);
-    await StorageService.saveSettings(updated);
+    try {
+      console.log('[useSettings] Updating settings:', updates);
+      const updated = { ...settings, ...updates };
+      setSettings(updated);
+      await StorageService.saveSettings(updated);
+      console.log('[useSettings] Settings saved successfully');
+    } catch (error) {
+      console.error('[useSettings] Error updating settings:', error);
+    }
   };
 
   const refreshLocation = async () => {
-    const location = await LocationService.getCurrentLocation();
-    await updateSettings({ location });
+    try {
+      console.log('[useSettings] Refreshing location...');
+      const location = await LocationService.getCurrentLocation();
+      console.log('[useSettings] Location refreshed:', location);
+      await updateSettings({ location });
+    } catch (error) {
+      console.error('[useSettings] Error refreshing location:', error);
+    }
   };
 
-  return { settings, updateSettings, refreshLocation };
+  return { settings, updateSettings, refreshLocation, isLoading };
 };

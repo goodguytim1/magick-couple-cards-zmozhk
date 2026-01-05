@@ -16,42 +16,70 @@ const JACKSONVILLE_FALLBACK: LocationData = {
 export const LocationService = {
   async requestPermission(): Promise<boolean> {
     try {
+      console.log('[LocationService] Requesting location permission...');
       const { status } = await Location.requestForegroundPermissionsAsync();
+      console.log('[LocationService] Permission status:', status);
       return status === 'granted';
     } catch (error) {
-      console.log('Error requesting location permission:', error);
+      console.error('[LocationService] Error requesting location permission:', error);
       return false;
     }
   },
 
   async getCurrentLocation(): Promise<LocationData> {
     try {
-      const hasPermission = await this.requestPermission();
+      console.log('[LocationService] Getting current location...');
       
-      if (!hasPermission) {
-        console.log('Location permission denied, using fallback');
+      // Check if location services are enabled
+      const servicesEnabled = await Location.hasServicesEnabledAsync();
+      console.log('[LocationService] Services enabled:', servicesEnabled);
+      
+      if (!servicesEnabled) {
+        console.log('[LocationService] Location services disabled, using fallback');
         return JACKSONVILLE_FALLBACK;
       }
 
+      const hasPermission = await this.requestPermission();
+      
+      if (!hasPermission) {
+        console.log('[LocationService] Location permission denied, using fallback');
+        return JACKSONVILLE_FALLBACK;
+      }
+
+      console.log('[LocationService] Fetching position...');
       const location = await Location.getCurrentPositionAsync({
         accuracy: Location.Accuracy.Balanced,
+        timeInterval: 5000,
+        distanceInterval: 0,
       });
 
-      const geocode = await Location.reverseGeocodeAsync({
-        latitude: location.coords.latitude,
-        longitude: location.coords.longitude,
-      });
+      console.log('[LocationService] Position received:', location.coords);
 
-      const city = geocode[0]?.city || 'Unknown';
-      const region = geocode[0]?.region || '';
+      // Try to get city name, but don't fail if geocoding fails
+      let city = 'Unknown';
+      let region = '';
+      
+      try {
+        const geocode = await Location.reverseGeocodeAsync({
+          latitude: location.coords.latitude,
+          longitude: location.coords.longitude,
+        });
+
+        city = geocode[0]?.city || 'Unknown';
+        region = geocode[0]?.region || '';
+        console.log('[LocationService] Geocoded to:', city, region);
+      } catch (geocodeError) {
+        console.error('[LocationService] Geocoding failed:', geocodeError);
+        // Continue with Unknown city rather than crashing
+      }
 
       return {
         latitude: location.coords.latitude,
         longitude: location.coords.longitude,
-        city: `${city}, ${region}`,
+        city: region ? `${city}, ${region}` : city,
       };
     } catch (error) {
-      console.log('Error getting location, using fallback:', error);
+      console.error('[LocationService] Error getting location, using fallback:', error);
       return JACKSONVILLE_FALLBACK;
     }
   },
