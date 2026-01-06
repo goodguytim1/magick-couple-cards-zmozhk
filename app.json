@@ -1,8 +1,7 @@
-
 {
   "expo": {
     "name": "Magick",
-    "slug": "magick",
+    "slug": "Magick",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/2f32a6ce-d9ea-44d4-a489-d710fb0b74aa.png",
@@ -44,5 +43,6 @@
     "extra": {
       "router": {}
     }
-  }
+  },
+  "scheme": "Magick"
 }

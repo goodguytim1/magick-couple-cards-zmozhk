@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from 'react';
-import { StorageService } from '@/utils/storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export const useFavorites = () => {
+export function useFavorites() {
   const [favorites, setFavorites] = useState<string[]>([]);
 
   useEffect(() => {
@@ -10,23 +10,30 @@ export const useFavorites = () => {
   }, []);
 
   const loadFavorites = async () => {
-    const favs = await StorageService.getFavorites();
-    setFavorites(favs.map(f => f.cardId));
+    try {
+      const stored = await AsyncStorage.getItem('favorites');
+      if (stored) {
+        setFavorites(JSON.parse(stored));
+      }
+    } catch (error) {
+      console.error('Failed to load favorites:', error);
+    }
   };
 
   const toggleFavorite = async (cardId: string) => {
-    const isFav = favorites.includes(cardId);
+    const newFavorites = favorites.includes(cardId)
+      ? favorites.filter(id => id !== cardId)
+      : [...favorites, cardId];
     
-    if (isFav) {
-      await StorageService.removeFavorite(cardId);
-      setFavorites(favorites.filter(id => id !== cardId));
-    } else {
-      await StorageService.addFavorite(cardId);
-      setFavorites([...favorites, cardId]);
+    setFavorites(newFavorites);
+    try {
+      await AsyncStorage.setItem('favorites', JSON.stringify(newFavorites));
+    } catch (error) {
+      console.error('Failed to save favorites:', error);
     }
   };
 
   const isFavorite = (cardId: string) => favorites.includes(cardId);
 
-  return { favorites, toggleFavorite, isFavorite, refreshFavorites: loadFavorites };
-};
+  return { favorites, toggleFavorite, isFavorite };
+}

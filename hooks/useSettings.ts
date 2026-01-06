@@ -1,10 +1,14 @@
 
 import { useState, useEffect } from 'react';
-import { UserSettings } from '@/types';
-import { StorageService } from '@/utils/storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export const useSettings = () => {
-  const [settings, setSettings] = useState<UserSettings>({
+export interface Settings {
+  darkMode: boolean;
+  monetizationMode: 'affiliate' | 'sponsor';
+}
+
+export function useSettings() {
+  const [settings, setSettings] = useState<Settings>({
     darkMode: false,
     monetizationMode: 'affiliate',
   });
@@ -14,15 +18,25 @@ export const useSettings = () => {
   }, []);
 
   const loadSettings = async () => {
-    const saved = await StorageService.getSettings();
-    setSettings(saved);
+    try {
+      const stored = await AsyncStorage.getItem('settings');
+      if (stored) {
+        setSettings(JSON.parse(stored));
+      }
+    } catch (error) {
+      console.error('Failed to load settings:', error);
+    }
   };
 
-  const updateSettings = async (updates: Partial<UserSettings>) => {
-    const updated = { ...settings, ...updates };
+  const updateSettings = async (newSettings: Partial<Settings>) => {
+    const updated = { ...settings, ...newSettings };
     setSettings(updated);
-    await StorageService.saveSettings(updated);
+    try {
+      await AsyncStorage.setItem('settings', JSON.stringify(updated));
+    } catch (error) {
+      console.error('Failed to save settings:', error);
+    }
   };
 
   return { settings, updateSettings };
-};
+}
