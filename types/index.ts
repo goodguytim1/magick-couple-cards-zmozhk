@@ -3,7 +3,7 @@ export interface Card {
   id: string;
   text: string;
   type: 'question' | 'mission';
-  deck: 'connection' | 'datenight' | 'challenge' | 'sparkquestions' | 'mirrormoments' | 'playfulsparks' | 'bondbuilders' | 'adventuresparks' | 'creativecharms';
+  deck: 'connection' | 'datenight' | 'challenge' | 'sparkquestions' | 'mirrormoments' | 'playfulsparks' | 'bondbuilders' | 'adventuresparks' | 'creativecharms' | 'mirrorquests' | 'bondquests' | 'magickmixer' | 'midnightmagick';
   tags: string[];
   recommendationType?: string;
   businessCategories?: string[];

@@ -59,14 +59,12 @@ export const StorageService = {
       return data ? JSON.parse(data) : {
         darkMode: false,
         monetizationMode: 'affiliate',
-        location: null,
       };
     } catch (error) {
       console.log('Error getting settings:', error);
       return {
         darkMode: false,
         monetizationMode: 'affiliate',
-        location: null,
       };
     }
   },

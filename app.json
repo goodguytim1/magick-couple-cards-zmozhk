@@ -1,34 +1,35 @@
+
 {
   "expo": {
     "name": "Magick",
-    "slug": "Magick",
+    "slug": "magick",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/natively-dark.png",
+    "icon": "./assets/images/2f32a6ce-d9ea-44d4-a489-d710fb0b74aa.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/images/natively-dark.png",
+      "image": "./assets/images/2f32a6ce-d9ea-44d4-a489-d710fb0b74aa.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#6200EE"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.Natively",
+      "bundleIdentifier": "com.magick.app",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/natively-dark.png",
-        "backgroundColor": "#000000"
+        "foregroundImage": "./assets/images/2f32a6ce-d9ea-44d4-a489-d710fb0b74aa.png",
+        "backgroundColor": "#6200EE"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.anonymous.Natively"
+      "package": "com.magick.app"
     },
     "web": {
-      "favicon": "./assets/images/final_quest_240x240.png",
+      "favicon": "./assets/images/2f32a6ce-d9ea-44d4-a489-d710fb0b74aa.png",
       "bundler": "metro"
     },
     "plugins": [
@@ -36,13 +37,12 @@
       "expo-router",
       "expo-web-browser"
     ],
-    "scheme": "natively",
+    "scheme": "magick",
     "experiments": {
       "typedRoutes": true
     },
     "extra": {
       "router": {}
     }
-  },
-  "scheme": "Magick"
+  }
 }
